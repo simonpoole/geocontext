@@ -1,0 +1,1 @@
+The countries with left hand traffic were retrieved from https://en.wikipedia.org/wiki/Left-_and_right-hand_traffic and might be a CC BY-SA 3.0 licensed derivative.
