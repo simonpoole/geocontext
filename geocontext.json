@@ -152,6 +152,15 @@
     "pk": {
         "left-hand-traffic": true
     },
+    "pt": {
+        "distance": "metric",
+        "left-hand-traffic": false,
+        "speed-limits": [
+            50,
+            90,
+            100
+            120
+        ]
     "sb": {
         "left-hand-traffic": true
     },
