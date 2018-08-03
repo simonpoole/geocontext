@@ -46,6 +46,18 @@
     "cy": {
         "left-hand-traffic": true
     },
+    "cz": {
+        "speed-limits": [
+            20,
+            30,
+            50,
+            70,
+            80,
+            90,
+            110,
+            130
+        ]
+    },
     "de": {
         "speed-limits": [
             30,
