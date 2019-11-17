@@ -10,7 +10,8 @@ Properties:
 
   __"speed-limits"__ array of common speed limits in the territory, if __"distance"__ is "imperial", the units are assumed to be miles per hour, otherwise km per hour
   
-    
+  __"languages"__ array of language codes for the territory  
+  
 Ideas for additional properties
 
 __"vienna-convention"__ signatory of https://en.wikipedia.org/wiki/Vienna_Convention_on_Road_Signs_and_Signals 
