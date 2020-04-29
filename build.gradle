@@ -1,0 +1,20 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'cz.alenkacz.gradle:json-validator:1.2.1'
+    }
+}
+
+apply plugin: 'json-validator'
+
+import cz.alenkacz.gradle.jsonvalidator.ValidateJsonTask
+
+task validate(type: ValidateJsonTask) {
+  targetJsonFile = file("geocontext.json") // only one of targetJsonFile or targetJsonDirectory can be specified 
+  jsonSchema = file("schema.json")
+}
+validate.group = 'validation'
+validate.description = 'Vaidate geocontext.json'

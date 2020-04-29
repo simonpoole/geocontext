@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "https://github.com/simonpoole/geocontext",
+    "type": "object",
+    "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "left-hand-traffic": {
+                "description": "true if this is a country with left hand traffic",
+                "type": "boolean"
+            },
+            "speed-limits": {
+                "description": "An array of commonly signposted speed limits",
+                "type": "array",
+                "items": {
+                    "type": "integer"
+                }
+            },
+            "languages": {
+                "description": "An array of languages spoken in use in the region",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "distance": {
+                "description": "In what system distances and speeds are measured",
+                "type": "string",
+                "enum": [
+                    "imperial",
+                    "metric"
+                ]
+            }
+        }
+    }
+}
