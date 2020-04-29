@@ -2,6 +2,8 @@
 
 The territory names are hierarchical as in __country__ or __country__-__territory__ to allow overriding higher level values (for example in the US Virgin Islands there is left hand traffic, so that requires an entry for us-vi). Note the lower level entries do not inherit properties from higher level ones.
 
+Currently the data is not versioned, to contribute please create a pull request.
+
 Properties:
 
   __"distance"__ unit system for distance and speed __"metric"__ (default) or __"imperial"__
