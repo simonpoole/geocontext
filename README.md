@@ -14,7 +14,7 @@ Properties:
   
   __"languages"__ array of language codes for the territory  
   
-  __"address_fields"__ array of OSM tag keys used in addresses in the territory 
+  __"address-keys"__ array of OSM tag keys used in addresses in the territory 
   
 Ideas for additional properties
 
