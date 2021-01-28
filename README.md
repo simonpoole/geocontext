@@ -14,10 +14,11 @@ Properties:
   
   __"languages"__ array of language codes for the territory  
   
+  __"address_fields"__ array of OSM tag keys used in addresses in the territory 
+  
 Ideas for additional properties
 
 __"vienna-convention"__ signatory of https://en.wikipedia.org/wiki/Vienna_Convention_on_Road_Signs_and_Signals 
 
 __"phone_number_format"__
 
-__"address_fields"__ 

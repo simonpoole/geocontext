@@ -52,6 +52,14 @@
             "it",
             "rm",
             "gsw"
+        ],
+        "address-keys": [
+            "addr:housenumber",
+            "addr:housename",
+            "addr:street",
+            "addr:place",
+            "addr:postcode",
+            "addr:city"
         ]
     },
     "cy": {

@@ -31,6 +31,13 @@
                     "imperial",
                     "metric"
                 ]
+            },
+            "address-keys": {
+                "description": "An array of OSM tag keys used in addresses",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
             }
         }
     }
