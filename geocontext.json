@@ -247,13 +247,13 @@
             "addr:hamlet",
             "addr:subdistrict",
             "addr:district",
-            "addr:province"
+            "addr:province",
             "addr:postcode",
         ],
         "languages": [
           th,
           nod,
-          mfa,
+          mfa
         ]
         
     },
