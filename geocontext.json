@@ -137,15 +137,15 @@
             50,
             90,
             130
-        ]
+        ],
         "languages": [
             "hu"
-        ]
+        ],
         "address-keys": [
             "addr:postcode",
-            "addr:city"
+            "addr:city",
             "addr:street",
-            "addr:housenumber",
+            "addr:housenumber"
         ]
     },
     "id": {
