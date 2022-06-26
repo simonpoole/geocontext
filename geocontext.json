@@ -105,6 +105,15 @@
             30,
             60,
             70
+        ],
+        "address-keys": [
+            "addr:housenumber",
+            "addr:street",
+            "addr:place",
+            "addr:parentstreet",
+            "addr:suburb",
+            "addr:city",
+            "addr:postcode"
         ]
     },
     "gi": {
@@ -291,11 +300,10 @@
             "addr:postcode"
         ],
         "languages": [
-          "th",
-          "nod",
-          "mfa"
+            "th",
+            "nod",
+            "mfa"
         ]
-        
     },
     "tl": {
         "left-hand-traffic": true
