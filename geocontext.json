@@ -93,8 +93,11 @@
     },
     "fr": {
         "speed-limits": [
+            30,
             50,
+            70,
             80,
+            110,
             130
         ]
     },
@@ -102,7 +105,10 @@
         "distance": "imperial",
         "left-hand-traffic": true,
         "speed-limits": [
+            20,
             30,
+            40,
+            50,
             60,
             70
         ],
