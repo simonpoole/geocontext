@@ -1,25 +1,59 @@
 
 buildscript {
     repositories {
-        jcenter()
         mavenCentral()
         maven {
             url "https://plugins.gradle.org/m2/"
         }
     }
     dependencies {
-        classpath 'cz.alenkacz.gradle:json-validator:1.3.0'
+        classpath "com.github.breadmoirai:github-release:2.5.2"
+        classpath(group: "com.github.java-json-tools", name: "json-schema-validator", version: "2.2.14");
+    }   
+}
+
+apply plugin: "com.github.breadmoirai.github-release"
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.github.fge.jackson.JsonLoader;
+import com.github.fge.jsonschema.core.report.ProcessingReport;
+import com.github.fge.jsonschema.main.JsonSchema;
+import com.github.fge.jsonschema.main.JsonSchemaFactory;
+
+ext {
+    version = '0.1.0'
+    schema_file = projectDir.getPath() + "/schema.json"
+    data_file = projectDir.getPath() + "/geocontext.json"
+    githubToken = System.getenv('GITHUB_TOKEN')
+}
+
+task validate() {
+    inputs.file(schema_file);
+    inputs.file(data_file);
+    doLast {
+        final JsonNode schemaFile = JsonLoader.fromPath(schema_file);
+        final JsonNode toValidate = JsonLoader.fromPath(data_file);
+        
+        final JsonSchemaFactory factory = JsonSchemaFactory.byDefault();
+        final JsonSchema schema = factory.getJsonSchema(schemaFile);
+
+        ProcessingReport report = schema.validate(toValidate);
+        if (!report.isSuccess()) {
+            throw new GradleException(report.toString());
+        }
     }
 }
-
-apply plugin: 'json-validator'
-
-import cz.alenkacz.gradle.jsonvalidator.ValidateJsonTask
-
-task validate(type: ValidateJsonTask) {
-  targetJsonFile = file("geocontext.json") // only one of targetJsonFile or targetJsonDirectory can be specified 
-  jsonSchema = file("schema.json")
-  onlyWithJsonExtension = true
-}
 validate.group = 'validation'
-validate.description = 'Vaidate geocontext.json'
+validate.description = 'Vaidate the json data'
+
+githubRelease {
+    token project.ext.githubToken == null ? "" : project.ext.githubToken    
+    owner = "simonpoole"
+    tagName = project.ext.version
+    releaseName = project.ext.version
+    targetCommitish = "main" 
+    generateReleaseNotes = true 
+
+    releaseAssets data_file, schema_file
+    overwrite = true
+}
