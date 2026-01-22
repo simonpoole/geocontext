@@ -368,7 +368,7 @@
     },
     "ph": {
         "distance": "metric",
-        "left-hand-traffic": true,
+        "left-hand-traffic": false,
         "speed-limits": [
             20,
             30,
@@ -495,4 +495,5 @@
         "left-hand-traffic": true
     }
 }
+
 
