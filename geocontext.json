@@ -366,6 +366,30 @@
     "pg": {
         "left-hand-traffic": true
     },
+    "ph": {
+        "distance": "metric",
+        "left-hand-traffic": true,
+        "speed-limits": [
+            20,
+            30,
+            40,
+            50,
+            70,
+            80
+        ],
+        "languages": [
+            "en",
+        ],
+        "address-keys": [
+            "addr:unit",
+            "addr:housenumber",
+            "addr:housename",
+            "addr:street",
+            "addr:place",
+            "addr:postcode",
+            "addr:city"
+        ]
+    },
     "pk": {
         "left-hand-traffic": true
     },
@@ -471,3 +495,4 @@
         "left-hand-traffic": true
     }
 }
+
